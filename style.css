@@ -1,0 +1,646 @@
+html {
+    scroll-behavior: smooth;
+}
+/* --- Reset & Base Style --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+
+.main-header {
+    background-color: #1a365d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #333;
+}
+
+.main-header h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.main-header p {
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+.top-nav {
+    background-color: #2b6cb0;
+    border-bottom: 2px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.top-nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.top-nav a:hover {
+    transition: 0.3s;
+    background-color: #2c5282;
+}
+
+/* --- 3. Slogan dengan Animasi --- */
+.slogan-container {
+    background-color: #edf2f7;
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee {
+    display: inline-block;
+    animation: jalan 15s linear infinite;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #2b6cb0;
+    font-size: 15px;
+    padding-left: 100%;
+}
+
+@keyframes jalan {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.article-item {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 15px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.article-item:hover {
+    background-color: #edf2f7;
+    transform: translateY(-3px);
+}
+
+.btn-daftar:hover {
+    background-color: #c05621;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* --- Wrapper Utama (Konten + Sidebar) --- */
+.main-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Supaya bisa turun ke bawah saat layar HP */
+}
+
+/* --- 4. Area Konten Utama (Kiri) --- */
+.content-area {
+    flex: 2;
+    padding: 20px;
+    min-width: 300px;
+    border-right: 2px solid #333;
+}
+
+.content-area h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2b6cb0;
+    padding-bottom: 5px;
+}
+
+.article-item {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 15px;
+    align-items: center;
+}
+
+.img-placeholder {
+    width: 120px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 10px;
+    flex-shrink: 0;
+    background-color: #cbd5e0;
+    border: 2px solid #4a5568;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.article-item:hover img {
+    transform: scale(1.05);
+}
+
+.img-placeholder img {
+    transition: 0.3s;
+}
+
+.article-text h3 {
+    font-size: 16px;
+    color: #2b6cb0;
+    margin-bottom: 5px;
+}
+
+/* --- 5. Sidebar (Kanan) --- */
+.right-sidebar {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ads-box {
+    padding: 20px;
+    background-color: #feebc8;
+    border-bottom: 2px solid #333;
+    text-align: center;
+    flex: 1;
+}
+
+.ads-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.btn-daftar {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #dd6b20;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sub-menu {
+    padding: 20px;
+    background-color: #f7fafc;
+}
+
+.sub-menu h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.sub-menu ul {
+    list-style: none;
+}
+
+.sub-menu li {
+    margin-bottom: 8px;
+    border-bottom: 1px dashed #cbd5e0;
+    padding-bottom: 4px;
+}
+
+.sub-menu a {
+    text-decoration: none;
+    color: #4a5568;
+    display: block;
+    padding: 8px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sub-menu a:hover {
+    background-color: #2b6cb0;
+    color: white;
+    padding-left: 15px;
+    transition: 0.3s;
+}
+
+.main-footer {
+    background-color: #1a365d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid #333;
+}
+
+/* --- WEB PROFILE--- */
+
+.info-section {
+    padding: 35px;
+    line-height: 1.8;
+}
+
+.info-section h2 {
+    margin-bottom: 20px;
+    color: #1a365d;
+    font-size: 32px;
+}
+
+.info-section p {
+    margin-bottom: 15px;
+}
+
+
+.kepsek-box {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.kepsek-box img {
+    width: 230px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* VISI MISI */
+.visi-misi {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.visi-card,
+.misi-card {
+    background-color: #f7fafc;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* TABLE */
+.profil-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profil-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+.profil-table tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* PRESTASI */
+.prestasi-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.prestasi-card {
+    background-color: #edf2f7;
+    padding: 15px;
+    border-left: 5px solid #2b6cb0;
+    border-radius: 8px;
+}
+
+/* --- WEB JURUSAN--- */
+/* GRID JURUSAN */
+.jurusan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.jurusan-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    padding-bottom: 20px;
+}
+
+.jurusan-card:hover {
+    transform: translateY(-8px);
+}
+
+/* GAMBAR */
+.jurusan-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* ISI */
+.jurusan-card h3 {
+    color: #1a365d;
+    margin: 15px;
+}
+
+.jurusan-card h4 {
+    margin: 15px 15px 8px;
+    color: #2b6cb0;
+}
+
+.jurusan-card p,
+.jurusan-card ul {
+    margin: 0 15px 10px;
+    line-height: 1.7;
+}
+
+.jurusan-card ul {
+    padding-left: 20px;
+}
+
+/* --- WEB ABOUT--- */
+
+.about-hero {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url('img/about-banner.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    height: 400px;
+
+    display: flex;
+    align-items: center;
+}
+
+.about-overlay {
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.about-overlay h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-overlay p {
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+/* KEUNGGULAN */
+.keunggulan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.keunggulan-card {
+    background-color: #f7fafc;
+    padding: 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.keunggulan-card:hover {
+    transform: translateY(-5px);
+    background-color: #edf2f7;
+}
+
+.keunggulan-card h3 {
+    margin-bottom: 15px;
+    color: #1a365d;
+}
+
+/* GALLERY */
+.kegiatan-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* QUOTE */
+.quote-section {
+    background-color: #1a365d;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.quote-section h2 {
+    font-size: 30px;
+    font-style: italic;
+}
+
+/* --- WEB CONTACT--- */
+
+/* CONTACT GRID */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* FORM */
+.contact-form {
+    background-color: #f7fafc;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.contact-form h3 {
+    margin-bottom: 20px;
+    color: #1a365d;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-form button {
+    background-color: #2b6cb0;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #1a365d;
+}
+
+/* INFO */
+.contact-info {
+    background-color: #edf2f7;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    color: #1a365d;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* MAPS */
+.maps-box {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* SOSMED */
+.sosmed-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sosmed-container a {
+    text-decoration: none;
+    background-color: #2b6cb0;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sosmed-container a:hover {
+    background-color: #1a365d;
+    transform: translateY(-3px);
+}
+
+
+/* -- Responsive Breakpoint (Media Query) --- */
+@media (max-width: 768px) {
+
+    .info-section {
+        padding: 20px;
+    }
+
+    .info-section h2 {
+        font-size: 26px;
+    }
+
+    .kepsek-box {
+        flex-direction: column;
+    }
+
+    .kepsek-box img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .top-nav ul {
+        flex-direction: column;
+    }
+
+    .about-hero {
+        height: auto;
+    }
+
+    .about-overlay {
+        padding: 30px 20px;
+    }
+
+    .about-overlay h2 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .about-overlay p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .content-area {
+        border-right: none;
+        border-bottom: 2px solid #333;
+    }
+
+    .article-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .img-placeholder {
+        width: 100%;
+        height: 150px;
+    }
+}
